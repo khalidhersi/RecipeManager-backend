@@ -26,7 +26,7 @@ public class RecipeManagerController {
 @PostMapping("/recipe")
     public ResponseEntity<String> createRecipeManager(@RequestBody RecipeManager recipe){
     repository.save(recipe);
-    return ResponseEntity.status(HttpStatus.CREATED).body(" added!" + recipe.getRecipe());
+    return ResponseEntity.status(HttpStatus.CREATED).body(" added!" );
 }
 
     @DeleteMapping("/recipe/{id}")
